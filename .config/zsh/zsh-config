@@ -89,9 +89,13 @@ export LESS=-R
   || echo "Missing package zsh-autosuggestions."
 
 # Use history substring search
-[ -r /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]\
-  && source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh\
-  || echo "Mising package zsh-history-substring-search."
+if [ -r /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]
+then
+    source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+    export HISTORY_SUBSTRING_SEARCH_FUZZY=1
+else
+    echo "Mising package zsh-history-substring-search."
+fi
 
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo

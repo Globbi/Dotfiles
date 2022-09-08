@@ -9,6 +9,10 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
 	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
+# brightness control
+XF86MonBrightness{Up,Down}
+	brightnessctl s 10%{+,-}
+
 # terminal emulator
 super + Return
 	alacritty

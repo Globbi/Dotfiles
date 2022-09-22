@@ -52,6 +52,6 @@ fi
 
 setxkbmap us
 nitrogen --restore &
-picom &
+# picom &
 urxvtd -q &             # launch the URxvt Daemon with quiet flag
 exec bspwm

@@ -15,7 +15,7 @@ XF86MonBrightness{Up,Down}
 
 # terminal emulator
 super + Return
-	alacritty
+	urxvtc
 
 # program launcher
 super + @space

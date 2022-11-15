@@ -102,6 +102,10 @@ URxvt.depth: 32
 !URxvt.perl-lib:                       string
 !URxvt.perl-eval:                      perl-eval
 !URxvt.perl-ext-common:                string
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+URxvt.url-select.underline: true
+URxvt.url-select.launcher:  firefox
+URxvt.keyboard-select.clipboard: true
 !URxvt.perl-ext:                       string
 !URxvt.iso14755:                       boolean
 !URxvt.iso14755_52:                    boolean
@@ -109,6 +113,9 @@ URxvt.depth: 32
 !URxvt.keysym.sym:                     keysym
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 !URxvt.background.border:              boolean

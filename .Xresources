@@ -64,7 +64,8 @@ URxvt.color15: #eaeaea
 !URxvt.borderColor:                    color
 !URxvt.iconFile:                       file
 URxvt.font: xft:JetBrainsMono Nerd Font Mono:size=13,\
-            xft:Iosevka Nerd Font
+            xft:Iosevka Term:size=13,\
+            xft:Noto Emoji:size=13
 !URxvt.boldFont:                       fontname
 !URxvt.italicFont:                     fontname
 !URxvt.boldItalicFont:                 fontname

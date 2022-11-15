@@ -107,6 +107,10 @@ URxvt.depth: 32
 !URxvt.iso14755_52:                    boolean
 !URxvt.xrm:                            string
 !URxvt.keysym.sym:                     keysym
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 !URxvt.background.border:              boolean
 !URxvt.background.expr:                string
 !URxvt.background.interval:            seconds

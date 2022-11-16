@@ -28,7 +28,7 @@ WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider
 
 
 ## Keybindings section
-bindkey -e
+bindkey -v
 bindkey '^[[7~' beginning-of-line                               # Home key
 bindkey '^[[H' beginning-of-line                                # Home key
 if [[ "${terminfo[khome]}" != "" ]]; then
@@ -107,3 +107,14 @@ bindkey '^[[B' history-substring-search-down
 
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
+
+# Enable fzf keybindings and completion
+if [ -r /usr/share/fzf/key-bindings.zsh ]
+then
+  source /usr/share/fzf/key-bindings.zsh
+fi
+if [ -r /usr/share/fzf/completion.zsh ]
+then
+  source /usr/share/fzf/completion.zsh
+fi
+

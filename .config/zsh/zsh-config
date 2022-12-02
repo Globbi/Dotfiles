@@ -60,8 +60,8 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias cb="xclip -selection clipboard"
 #alias gitu='git add . && git commit && git push'
-if [ $TERM = 'alacritty' ]; then
-    alias ssh="TERM=xterm-256color ssh"                         # Improves compatibility when ssh'ing with alacritty
+if [ $TERM = 'alacritty' ] || [ $TERM = 'rxvt-unicode-256color' ] ; then
+    alias ssh="TERM=xterm-256color ssh"                         # Improves compatibility when ssh'ing
 fi
 
 # File and Dir colors for ls and other outputs
